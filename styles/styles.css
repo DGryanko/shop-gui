@@ -1,0 +1,225 @@
+:root {
+    /* background */
+    --c-dark: #141d2d;
+    --c-light: #fff;
+    --c-accent: #ff6b08;
+
+    --c-dark-blue: #253045;
+    --c-grey-blue: #4a5771;
+    --c-grey-light: #f1f2f2;
+    --c-grey: #bcc1d2;
+
+    /* text */
+    --txt-c-dark: var(--c-dark);
+    --txt-c-grey: #4f5b70;
+    --txt-c-grey-light: var(--c-grey-light);
+    --txt-c-accent: var(--c-accent);
+    --txt-c-light: var(--c-light);
+
+    /* modals */
+    --modal-bgd-dark: rgba(20, 29, 45, 0.8);
+    /* font */
+    --font-main: "Acrom", sans-serif;
+
+    /* container width */
+    --vertical-scroll: 20px;
+    --mobile: calc(300px + var(--vertical-scroll));
+    --tablet: calc(640px + var(--vertical-scroll));
+    --desktop: calc(900px + var(--vertical-scroll));
+    --desktop-lg: calc(1146px + var(--vertical-scroll));
+
+    /* animation */
+    --animation-fast: 0.1s;
+    --animation-slow: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: antiquewhite;
+}
+
+@font-face {
+    font-family: "Acrom";
+    src: url("../fonts/acrom/Acrom-ExtraBold.eot");
+    src: local("Acrom ExtraBold"), local("Acrom-ExtraBold"),
+        url("../fonts/acrom/Acrom-ExtraBold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/acrom/Acrom-ExtraBold.woff") format("woff"),
+        url("../fonts/acrom/Acrom-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Acrom";
+    src: url("../fonts/acrom/Acrom-Bold.eot");
+    src: local("Acrom Bold"), local("Acrom-Bold"),
+        url("../fonts/acrom/Acrom-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/acrom/Acrom-Bold.woff") format("woff"),
+        url("../fonts/acrom/Acrom-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Acrom";
+    src: url("../fonts/acrom/Acrom-Regular.eot");
+    src: local("Acrom Regular"), local("Acrom-Regular"),
+        url("../fonts/acrom/Acrom-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/acrom/Acrom-Regular.woff") format("woff"),
+        url("../fonts/acrom/Acrom-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--txt-c-dark);
+    text-align: center;
+}
+
+.form_container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--c-dark);
+    padding: 35px 30px 40px 30px;
+  }
+
+.form_input_container {
+    background-color: bisque;
+    display: flex;
+    margin-top: 30%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 30px 40px 30px;
+}
+
+.form_input {
+    padding: 10px 10px 15px 10px;
+    margin-bottom: 30px;
+    background: beige;
+    color: var(--txt-c-grey);
+    border: none;
+    border-bottom: 1px solid var(--c-grey-blue);
+    text-align: center;
+}
+
+.form_input_err {
+    transition: 0.2s ease-in-out;
+    border: 1px solid red;
+}
+
+.form_submit {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+
+
+.accent_btn {
+    background: rgba(83, 196, 8, 0.815);
+    width: 299px;
+    height: 60px;
+    color: var(--c-light);
+    padding: 20px 35px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.accent_btn:hover {
+    outline: 1px solid var(--c-accent);
+    background: transparent;
+    color: var(--txt-c-accent);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    display: block;
+    background: var(--modal-bgd-dark);
+}
+
+.modal_active {
+    z-index: 1100;
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.modal_area_bgd {
+    background: var(--modal-bgd-dark);
+}
+
+.body_scroll_disable {
+    overflow: hidden;
+}
+
+.project-modal-scrollable {
+    max-width: 300px;
+}
+
+/* Request received */
+.modal_request_received {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.request_received_container {
+    background: var(--c-light);
+    padding: 60px 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.request_received_title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--txt-c-accent);
+    margin-top: 0;
+}
+
+.request_received_primary {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--txt-c-dark);
+    margin-top: 0;
+}
+
+.request_received_secondary {
+    font-size: 17px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--txt-c-dark);
+    width: 185px;
+    margin-top: 0;
+}
