@@ -77,3 +77,24 @@ fetch(botTest, {
     },
   });
 }
+
+  //запрос из postman
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "name": clientName.value,
+  "email": clientEmail.value
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://wardek.tk:8052/shop-server/api/users", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
