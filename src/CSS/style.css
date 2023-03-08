@@ -1,0 +1,140 @@
+:root {
+    /* background */
+    --c-dark: #141d2d;
+    --c-light: #fff;
+    --c-accent: #ff6b08;
+
+    --c-dark-blue: #253045;
+    --c-grey-blue: #4a5771;
+    --c-grey-light: #f1f2f2;
+    --c-grey: #bcc1d2;
+
+    /* text */
+    --txt-c-dark: var(--c-dark);
+    --txt-c-grey: #4f5b70;
+    --txt-c-grey-light: var(--c-grey-light);
+    --txt-c-accent: var(--c-accent);
+    --txt-c-light: var(--c-light);
+
+    /* modals */
+    --modal-bgd-dark: rgba(20, 29, 45, 0.8);
+    /* font */
+    --font-main: "Acrom", sans-serif;
+
+    /* container width */
+    --vertical-scroll: 20px;
+    --mobile: calc(300px + var(--vertical-scroll));
+    --tablet: calc(640px + var(--vertical-scroll));
+    --desktop: calc(900px + var(--vertical-scroll));
+    --desktop-lg: calc(1146px + var(--vertical-scroll));
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Acrom";
+    src: url("../fonts/acrom/Acrom-ExtraBold.eot");
+    src: local("Acrom ExtraBold"), local("Acrom-ExtraBold"),
+        url("../fonts/acrom/Acrom-ExtraBold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/acrom/Acrom-ExtraBold.woff") format("woff"),
+        url("../fonts/acrom/Acrom-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Acrom";
+    src: url("../fonts/acrom/Acrom-Bold.eot");
+    src: local("Acrom Bold"), local("Acrom-Bold"),
+        url("../fonts/acrom/Acrom-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/acrom/Acrom-Bold.woff") format("woff"),
+        url("../fonts/acrom/Acrom-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Acrom";
+    src: url("../fonts/acrom/Acrom-Regular.eot");
+    src: local("Acrom Regular"), local("Acrom-Regular"),
+        url("../fonts/acrom/Acrom-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/acrom/Acrom-Regular.woff") format("woff"),
+        url("../fonts/acrom/Acrom-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    text-decoration: none;
+}
+
+.container {
+    min-width: 320px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 30px 10px 55px 10px;
+}
+
+.middle {
+    text-align: center;
+    margin: 14em 0;
+}
+
+.btn {
+    color: #f1f2f2;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 0px 20px;
+    border-radius: 6px;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.btn:hover {
+    color: #000;
+    transform: rotate(5deg);
+}
+
+.btn_normal {
+    background: rgb(41, 124, 250);
+
+}
+
+.btn_merchant {
+    background: rgb(235, 72, 72);
+
+}
+
+.btn_customer {
+    background: rgb(36, 185, 36);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.inputs input {
+    padding: 10px;
+    margin: 10px;
+}
