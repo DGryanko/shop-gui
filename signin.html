@@ -18,11 +18,37 @@
                     <a href="./index.html" class="previous round">‹</a>
                 </div>
                 <input type="email" class="callback_form_input" placeholder="Email" id="email">
-                <input type="email" class="callback_form_input" placeholder="Password" id="password">
+                <input type="password" class="callback_form_input" placeholder="Password" id="password">
             </div>
-            <a href="#" class="btn btn_normal">Sign in</a>
+            <input type="submit" class="btn btn_normal" id="SignIn" value="Sign in">
         </form>
     </section>
 </body>
+<script>
+    const axios = require('axios');
+
+    const url = 'https://wardek.tk/shop-server/api/auth/token';
+    const emailInput = document.querySelector('#email');
+    const passwordInput = document.querySelector('#password');
+    const signInButton = document.querySelector('#SignIn');
+
+    signInButton.addEventListener('click', (event) => {
+        event.preventDefault(); // предотвращаем стандартное поведение формы
+
+        const data = {
+            email: emailInput.value,
+            password: passwordInput.value,
+        };
+
+        axios.post(url, data)
+            .then((response) => {
+                console.log(response.data.token);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    });
+
+</script>
 
 </html>
