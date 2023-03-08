@@ -25,29 +25,61 @@
     </section>
 </body>
 <script>
-    const axios = require('axios');
+    const signInButton = document.querySelector("#SignIn");
+    const emailInput = document.querySelector("#email");
+    const passwordInput = document.querySelector("#password");
 
-    const url = 'https://wardek.tk/shop-server/api/auth/token';
-    const emailInput = document.querySelector('#email');
-    const passwordInput = document.querySelector('#password');
-    const signInButton = document.querySelector('#SignIn');
+    signInButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        let errInForm = false;
+        if (!emailInput.value.trim() || !isEmailValid(emailInput.value)) {
+            emailInput.classList.add("callback_form_input_err");
+            errInForm = true;
+        } else {
+            emailInput.classList.remove("callback_form_input_err");
+        }
+        if (!passwordInput.value.trim()) {
+            passwordInput.classList.add("callback_form_input_err");
+            errInForm = true;
+        } else {
+            passwordInput.classList.remove("callback_form_input_err");
+        }
+        if (errInForm) {
+            return;
+        }
 
-    signInButton.addEventListener('click', (event) => {
-        event.preventDefault(); // предотвращаем стандартное поведение формы
-
+        const url = "https://wardek.tk/shop-server/api/auth/token";
         const data = {
-            email: emailInput.value,
-            password: passwordInput.value,
+            email: emailInput.value.trim(),
+            password: passwordInput.value.trim(),
         };
 
-        axios.post(url, data)
+        fetch(url, {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-type": "application/json",
+            },
+        })
             .then((response) => {
-                console.log(response.data.token);
+                if (!response.ok) {
+                    throw new Error(response.status);
+                }
+                return response.json();
+            })
+            .then((json) => {
+                // В случае успешного запроса тут можно выполнить какие-то действия
+                console.log(json);
             })
             .catch((error) => {
-                console.error(error);
+                console.error("Ошибка при получении токена", error);
             });
     });
+
+    function isEmailValid(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email.toLowerCase());
+    }
 
 </script>
 
