@@ -138,3 +138,29 @@ form {
     padding: 10px;
     margin: 10px;
 }
+
+
+
+.previous {
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: #d86767;
+    color: black;
+}
+
+.round {
+    border-radius: 50%;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    position: relative;
+    margin-left: 0;
+    right: 8em;
+}
+
+.round:hover {
+    background-color: #dd3434;
+    color: black;
+    transform: scale(1.2);
+
+}
