@@ -19,7 +19,7 @@
     /* modals */
     --modal-bgd-dark: rgba(20, 29, 45, 0.8);
     /* font */
-    --font-main: "Acrom", sans-serif;
+    --font-main: "HeliosC", sans-serif;
 
     /* container width */
     --vertical-scroll: 20px;
@@ -34,40 +34,37 @@ html {
 }
 
 @font-face {
-    font-family: "Acrom";
-    src: url("../fonts/acrom/Acrom-ExtraBold.eot");
-    src: local("Acrom ExtraBold"), local("Acrom-ExtraBold"),
-        url("../fonts/acrom/Acrom-ExtraBold.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/acrom/Acrom-ExtraBold.woff") format("woff"),
-        url("../fonts/acrom/Acrom-ExtraBold.ttf") format("truetype");
-    font-weight: 800;
+    font-family: "HeliosC";
+    src: url("../fonts/44-font.otf");
+    src: local("HeliosC"), local("HeliosC"),
+        font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Acrom";
-    src: url("../fonts/acrom/Acrom-Bold.eot");
-    src: local("Acrom Bold"), local("Acrom-Bold"),
-        url("../fonts/acrom/Acrom-Bold.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/acrom/Acrom-Bold.woff") format("woff"),
-        url("../fonts/acrom/Acrom-Bold.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
+    font-family: "HeliosC";
+    src: url("../fonts/44-font.otf");
+    src: local("HeliosC"), local("HeliosC"),
+        font-weight: bold;
+    font-style: bold;
 }
 
 @font-face {
-    font-family: "Acrom";
-    src: url("../fonts/acrom/Acrom-Regular.eot");
-    src: local("Acrom Regular"), local("Acrom-Regular"),
-        url("../fonts/acrom/Acrom-Regular.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/acrom/Acrom-Regular.woff") format("woff"),
-        url("../fonts/acrom/Acrom-Regular.ttf") format("truetype");
-    font-weight: normal;
+    font-family: "HeliosC";
+    src: url("../fonts/44-font.otf");
+    src: local("HeliosC"), local("HeliosC"),
+        font-weight: normal;
     font-style: normal;
 }
 
 * {
     text-decoration: none;
+}
+
+.background {
+    background-image: url("../src/cyber-monday-event-sale-elements-on-black-background\ 2.png"), url("../src/bg.png");
+    background-blend-mode: darken;
+    background-size: cover;
 }
 
 .container {
@@ -83,40 +80,93 @@ html {
 
 .middle {
     text-align: center;
-    margin: 9em 0 0;
+    margin: 10% 0 0;
+}
+
+.white_frame {
+    background: #FFFFFF;
+    border-radius: 15px;
+    width: 726px;
+}
+
+.green_txt {
+    padding-bottom: 2em;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    color: #525B6A;
+    font-family: "HeliosC";
+}
+
+.callback_form_input {
+    width: 591px;
+    height: 2em;
+    background: #EEEEEE;
+    border-radius: 21.5px;
+    outline: none;
+    border: none;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+    padding-top: 2em;
+    padding-bottom: 3em;
+
+    font-family: "HeliosC";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14.7px;
+    line-height: 17px;
+    text-align: center;
+
+    color: #18A0FB;
+
 }
 
 .btn {
     color: #f1f2f2;
     text-align: center;
-    padding: 10px 10px;
-    margin: 0px 20px;
-    border-radius: 6px;
+    width: 213px;
+    height: 43px;
+    border-radius: 21.5px;
     transition: all 0.1s ease-in-out;
     cursor: pointer;
     outline: none;
     border: none;
     display: inline-block;
-    margin: 10px;
+    margin: 10px 4em;
+
+    line-height: 2.2em;
+
+    font-family: "HeliosC";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
 }
 
 .btn:hover {
     color: #000;
-    transform: rotate(5deg);
 }
 
 .btn_normal {
-    background: rgb(41, 124, 250);
+    background: #18A0FB;
+    width: 135px;
+    height: 43px;
 
 }
 
 .btn_merchant {
-    background: rgb(235, 72, 72);
-
+    background: #FF0000;
 }
 
 .btn_customer {
-    background: rgb(36, 185, 36);
+    background: #00CC00;
+    border: 1px solid #E1E1E1;
 }
 
 
@@ -138,8 +188,6 @@ form {
     padding: 10px;
     margin: 10px;
 }
-
-
 
 .previous {
     flex-direction: row;
