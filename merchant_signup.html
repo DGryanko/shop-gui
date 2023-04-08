@@ -5,23 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>merchant sign up</title>
+    <title>Merchant sign up</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/font-awesome.min.css">
 </head>
 
-<body class="container">
-    <section>
-
+<body class="container_row">
+    <section class="background_merchant column">
+        <img src="./src/Frame.png">
+        <h1 class="white_txt">Shop</h1>
+    </section>
+    <section class="column">
         <form class="middle">
             <div class="inputs">
-                <div>
-                    <a href="./index.html" class="previous round">‹</a>
+                <div class="previous">
+                    <a href="./index.html" class="round"><img src="./src/Group 16.svg"></a>
                 </div>
-                <input type="text" class="callback_form_input" placeholder="Name" id="merchant_name">
+                <div>
+                    <h2 class="green_txt middle">Registration as Merchant</h2>
+                </div>
                 <input type="email" class="callback_form_input" placeholder="Email" id="merchant_email">
+                <input type="text" class="callback_form_input" placeholder="Name" id="merchant_name">
                 <input type="password" class="callback_form_input" placeholder="Password" id="merchant_password">
-                <input type="password" class="callback_form_input" placeholder="Password" id="merchant_password_repeat">
+                <input type="password" class="callback_form_input" placeholder="Password confirmation"
+                    id="merchant_password_repeat">
             </div>
             <input type="submit" class="btn btn_merchant" value="Sign up as a merchant">
             <a href="./index.html" class="btn btn_normal">Sign in</a>

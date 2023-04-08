@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .burger-menu {
+            width: 104px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #ff0000;
+            transition: all 0.3s ease-in-out;
+            z-index: 9999;
+        }
+
+        .burger-menu:hover {
+            width: 280px;
+        }
+
+        .burger-menu--open {
+            width: 280px;
+        }
+
+        .burger-menu__item {
+            color: #ffffff;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        .burger-menu__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .burger-menu__list li {
+            margin-bottom: 10px;
+        }
+
+        .burger-menu__list li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .burger-menu__list li a:hover {
+            background-color: #ffffff;
+            color: #ff0000;
+        }
+
+        .burger-menu__item.settings {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .burger-menu__item.settings i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .create-shop {
+            font-weight: bold;
+            padding-top: 20px;
+        }
+
+        .create-shop i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="burger-menu">
+        <div class="burger-menu__item create-shop"><i class="fa fa-shopping-bag"></i> Create new shop</div>
+        <ul class="burger-menu__list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="burger-menu__item settings"><i class="fa fa-cog"></i></div>
+    </div>
+
+</body>
+<script>
+    const burgerMenu = document.querySelector('.burger-menu');
+    const openButton = document.querySelector('.open-burger-menu');
+    const closeButton = document.querySelector('.close-burger-menu');
+
+    openButton.addEventListener('click', () => {
+        burgerMenu.classList.add('burger-menu--open');
+    });
+
+    closeButton.addEventListener('click', () => {
+        burgerMenu.classList.remove('burger-menu--open');
+    });
+</script>
+
+</html>

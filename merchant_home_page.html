@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant home page</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/burger.css">
+    <link rel="stylesheet" href="./CSS/table.css">
+    <link rel="stylesheet" href="./CSS/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="background_merchant_home_page">
+    <div class="burger-menu">
+        <div class="burger-menu__item create-shop"><i class="fa fa-shopping-bag"></i>Shop</div>
+        <ul class="burger-menu__list">
+            <li><a href="#">Create new shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div><a href="#" class="burger-menu__item settings"><i class="fa fa-cog"></i>Settings</a></div>
+    </div>
+    <header class="header_merchant">
+        <a href="#">Wallet</a>
+        <a>mailto</a>
+    </header>
+    <!-- Main content -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th></th>
+                    <th>Wallet</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add rows dynamically from server response -->
+                <tr>
+                    <td>Shop Name</td>
+                    <td><button class="edit-btn">Edit</button></td>
+                    <td>1000</td>
+                    <td><button class="deposit-btn">Deposit</button></td>
+                    <td>
+                        <button class="withdraw-btn">Withdraw</button>
+                        <button class="products-btn">Products</button>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const burgerMenu = document.querySelector('.burger-menu');
+        const menuList = document.querySelector('.burger-menu__list');
+
+        burgerMenu.addEventListener('mouseenter', () => {
+            burgerMenu.classList.add('burger-menu--open');
+        });
+
+        burgerMenu.addEventListener('mouseleave', () => {
+            burgerMenu.classList.remove('burger-menu--open');
+        });
+
+        menuList.addEventListener('mouseenter', () => {
+            burgerMenu.classList.add('burger-menu--open');
+        });
+
+        menuList.addEventListener('mouseleave', () => {
+            burgerMenu.classList.remove('burger-menu--open');
+        });
+
+        function createTableRow(shop) {
+            const row = document.createElement('tr');
+            const nameCell = document.createElement('td');
+            const editCell = document.createElement('td');
+            const walletCell = document.createElement('td');
+            const depositCell = document.createElement('td');
+            const actionsCell = document.createElement('td');
+
+            nameCell.textContent = shop.name;
+            walletCell.textContent = shop.wallet;
+
+            const editBtn = document.createElement('button');
+            editBtn.classList.add('edit-btn');
+            editBtn.textContent = 'Edit';
+            editCell.appendChild(editBtn);
+
+            const depositBtn = document.createElement('button');
+            depositBtn.classList.add('deposit-btn');
+            depositBtn.textContent = 'Deposit';
+            depositCell.appendChild(depositBtn);
+
+            const withdrawBtn = document.createElement('button');
+            withdrawBtn.classList.add('withdraw-btn');
+            withdrawBtn.textContent = 'Withdraw';
+            actionsCell.appendChild(withdrawBtn);
+
+            const productsBtn = document.createElement('button');
+            productsBtn.classList.add('products-btn');
+            productsBtn.textContent = 'Products';
+            actionsCell.appendChild(productsBtn);
+
+            row.appendChild(nameCell);
+            row.appendChild(editCell);
+            row.appendChild(walletCell);
+            row.appendChild(depositCell);
+            row.appendChild(actionsCell);
+
+            return row;
+        }
+
+        function loadShops() {
+            const tableBody = document.getElementById('table-body');
+            fetch('your-server-url')
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error('Server response was not ok.');
+                    }
+                })
+                .then((shops) => {
+                    shops.forEach((shop) => {
+                        const tableRow = createTableRow(shop);
+                        tableBody.appendChild(tableRow);
+                    });
+                })
+                .catch((error) => {
+                    console.error('Error fetching shop data:', error);
+                });
+        }
+
+        loadShops();
+    </script>
+
+</body>
+
+</html>

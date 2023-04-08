@@ -1,0 +1,69 @@
+.burger-menu {
+    width: 104px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ff0000;
+    transition: all 0.3s ease-in-out;
+    z-index: 9999;
+    }
+    
+    .burger-menu--open {
+    width: 280px;
+    }
+    
+    .burger-menu__item {
+    color: #ffffff;
+    padding: 20px;
+    font-size: 18px;
+    }
+    
+    .burger-menu__list {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+    .burger-menu:hover .burger-menu__list {
+    display: block;
+    }
+    
+    .burger-menu__list li {
+    margin-bottom: 10px;
+    }
+    
+    .burger-menu__list li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    }
+    
+    .burger-menu__list li a:hover {
+    background-color: #ffffff;
+    color: #ff0000;
+    }
+    
+    .burger-menu__item.settings {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    }
+    
+    .burger-menu__item.settings i {
+    font-size: 24px;
+    margin-right: 10px;
+    }
+    
+    .create-shop {
+    font-weight: bold;
+    padding-top: 20px;
+    }
+    
+    .create-shop i {
+    font-size: 24px;
+    margin-right: 10px;
+    }
