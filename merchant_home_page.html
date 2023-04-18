@@ -15,21 +15,22 @@
 
 <body class="background_merchant_home_page">
     <div class="burger-menu">
-        <div class="burger-menu__item create-shop"><i class="fa fa-shopping-bag"></i>Shop</div>
+        <div class="burger-menu__item ">
+            <img class="shopping_bag" src="./src/Frame.png">
+            <span class="open shop">Shop</span>
+        </div>
         <ul class="burger-menu__list">
-            <li><a href="#">Create new shop</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li class="new_shop"><a href="#">Create new shop</a></li>
         </ul>
-        <div><a href="#" class="burger-menu__item settings"><i class="fa fa-cog"></i>Settings</a></div>
+        <div><a href="#" class="burger-menu__item settings"><i class="fa fa-cog"></i><span
+                    class="open"></span>Settings</span></a></div>
     </div>
-    <header class="header_merchant">
-        <a href="#">Wallet</a>
-        <a>mailto</a>
+    <header class="header_merchant shifted">
+        <div><a href="#">Wallet</a></div>
+        <div><a>mailto</a></div>
     </header>
     <!-- Main content -->
-    <div class="table-container">
+    <div class="table_container shifted">
         <table>
             <thead>
                 <tr>
@@ -60,14 +61,26 @@
     <script>
         const burgerMenu = document.querySelector('.burger-menu');
         const menuList = document.querySelector('.burger-menu__list');
+        const openItem = document.querySelector('.open');
+        const bag = document.querySelector('.shopping_bag');
+        const shifted = document.querySelector('.shifted');
 
         burgerMenu.addEventListener('mouseenter', () => {
             burgerMenu.classList.add('burger-menu--open');
+            openItem.style.opacity = "1";
+            openItem.style.visibility = 'visible';
+            bag.style.transform = "rotate(0deg)"
+            shifted.style.transform = "translateX(280px)";
         });
 
         burgerMenu.addEventListener('mouseleave', () => {
             burgerMenu.classList.remove('burger-menu--open');
+            openItem.style.opacity = "0";
+            openItem.style.visibility = 'hidden';
+            bag.style.transform = "rotate(90deg)"
+            shifted.style.transform = "translateX(104px)"
         });
+
 
         menuList.addEventListener('mouseenter', () => {
             burgerMenu.classList.add('burger-menu--open');
@@ -139,6 +152,7 @@
         }
 
         loadShops();
+
     </script>
 
 </body>

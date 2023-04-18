@@ -2,68 +2,105 @@
     width: 104px;
     height: 100%;
     position: fixed;
+    display: flex;
+    flex-direction: column;
     top: 0;
     left: 0;
     background-color: #ff0000;
     transition: all 0.3s ease-in-out;
     z-index: 9999;
-    }
-    
-    .burger-menu--open {
+}
+
+.burger-menu--open {
     width: 280px;
-    }
-    
-    .burger-menu__item {
+}
+
+.shifted {
+    transform: translateX(104px);
+    transition: all 0.3s ease-in-out;
+}
+
+.open {
+    visibility: hidden;
+    opacity: 0;
+    transition:0.3s ease-in-out;
+}
+
+.burger-menu__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     color: #ffffff;
     padding: 20px;
-    font-size: 18px;
-    }
-    
-    .burger-menu__list {
+    font-size: 24px;
+    font-weight: 500;
+
+}
+
+.burger-menu__list {
     display: none;
     list-style: none;
     margin: 0;
     padding: 0;
-    }
-    
-    .burger-menu:hover .burger-menu__list {
+    padding-top: 30px;
+}
+
+
+.burger-menu:hover .burger-menu__list {
+    opacity: 1;
     display: block;
-    }
-    
-    .burger-menu__list li {
+}
+
+.burger-menu__list li {
     margin-bottom: 10px;
-    }
-    
-    .burger-menu__list li a {
+}
+
+.burger-menu__list li a {
+    width: 100%;
     color: #ffffff;
     text-decoration: none;
     padding: 10px;
-    }
-    
-    .burger-menu__list li a:hover {
+    font-family: HeliosC;
+}
+
+.burger-menu__list li a:hover {
     background-color: #ffffff;
     color: #ff0000;
-    }
-    
-    .burger-menu__item.settings {
+}
+
+.burger-menu__item.settings {
     position: absolute;
     bottom: 20px;
     left: 20px;
     display: flex;
     align-items: center;
-    }
-    
-    .burger-menu__item.settings i {
+    font-family: HeliosC;
+}
+
+.burger-menu__item.settings i {
     font-size: 24px;
     margin-right: 10px;
-    }
-    
-    .create-shop {
+}
+
+.shop {
+    font-size: 35px;
     font-weight: bold;
     padding-top: 20px;
-    }
-    
-    .create-shop i {
+}
+
+.shop i {
     font-size: 24px;
     margin-right: 10px;
-    }
+}
+
+.new_shop {
+    text-align: center;
+}
+
+.shopping_bag {
+    width: 35px;
+    padding-right: 13px;
+    transform: rotate(90deg);
+    transition: 0.3s ease-in-out;
+}
+

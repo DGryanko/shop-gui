@@ -1,7 +1,8 @@
-/* Add your custom CSS here */
-.table-container {
-    width: 100%;
+/* CSS table */
+.table_container {
+    /* width: 100%; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-top: 20px;
 }
