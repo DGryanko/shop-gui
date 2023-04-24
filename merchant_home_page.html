@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merchant home page</title>
+    <link rel="icon" type="image/x-icon" href="./src/logo.png">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/burger.css">
     <link rel="stylesheet" href="./CSS/table.css">
@@ -13,24 +14,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body class="background_merchant_home_page">
+<body class="background_merchant_home_page wrapper">
     <div class="burger-menu">
         <div class="burger-menu__item ">
             <img class="shopping_bag" src="./src/Frame.png">
             <span class="open shop">Shop</span>
         </div>
         <ul class="burger-menu__list">
-            <li class="new_shop"><a href="#">Create new shop</a></li>
+            <li>
+                <a href="#" id="new-shop" class="new_shop">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none">
+                            <path fill="#fff"
+                                d="M4.688 0A4.687 4.687 0 0 0 0 4.688v17.625A4.688 4.688 0 0 0 4.688 27h8.845a9.67 9.67 0 0 1-.933-1.875H4.688a2.812 2.812 0 0 1-2.813-2.813V4.688a2.813 2.813 0 0 1 2.813-2.812h17.625a2.812 2.812 0 0 1 2.812 2.813V12.6a9.67 9.67 0 0 1 1.875.933V4.688A4.688 4.688 0 0 0 22.312 0H4.688ZM21.75 12c.244 0 .486.009.725.026a.937.937 0 0 0-.913-1.151h-7.875a.938.938 0 0 0 0 1.875h4.306A9.72 9.72 0 0 1 21.75 12ZM4.5 5.437c0-.517.42-.937.938-.937h16.125a.937.937 0 0 1 0 1.875H5.438a.938.938 0 0 1-.938-.938Zm6.75 6.188a3.376 3.376 0 1 1-6.751 0 3.376 3.376 0 0 1 6.751 0Zm-1.875 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Zm-1.5 11.625a3.375 3.375 0 1 0 0-6.75 3.375 3.375 0 0 0 0 6.75Zm0-1.875a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM30 21.75a8.25 8.25 0 1 1-16.5 0 8.25 8.25 0 0 1 16.5 0Zm-7.5-5.25a.75.75 0 1 0-1.5 0V21h-4.5a.75.75 0 1 0 0 1.5H21V27a.75.75 0 1 0 1.5 0v-4.5H27a.75.75 0 1 0 0-1.5h-4.5v-4.5Z" />
+                        </svg>
+                    </div>
+            </li>
         </ul>
-        <div><a href="#" class="burger-menu__item settings"><i class="fa fa-cog"></i><span
-                    class="open"></span>Settings</span></a></div>
+        <a href="#" class="burger-menu__item settings" id="settings">
+            <i class="fa fa-cog"></i>
+            <!-- <span class="open">Settings</span> -->
+        </a>
     </div>
     <header class="header_merchant shifted">
-        <div><a href="#">Wallet</a></div>
-        <div><a>mailto</a></div>
+        <div>
+            <a href="#" class="gray_txt">Wallet</a>
+        </div>
+        <div>
+            <a>{username}</a>
+        </div>
+        <div class="log_out">
+            <a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                    <path stroke="#D8D8D8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 19H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h4M14 15l5-5-5-5M19 10H7" />
+                </svg>
+            </a>
+        </div>
     </header>
     <!-- Main content -->
-    <div class="table_container shifted">
+    <section class="table_container">
         <table>
             <thead>
                 <tr>
@@ -44,19 +67,109 @@
             <tbody>
                 <!-- Add rows dynamically from server response -->
                 <tr>
-                    <td>Shop Name</td>
+                    <td class="shop_name">Shop Name</td>
                     <td><button class="edit-btn">Edit</button></td>
-                    <td>1000</td>
+                    <td >1000</td>
                     <td><button class="deposit-btn">Deposit</button></td>
                     <td>
                         <button class="withdraw-btn">Withdraw</button>
                         <button class="products-btn">Products</button>
                     </td>
                 </tr>
+                <tr>
+                    <td class="shop_name">Shop Name</td>
+                    <td><button class="edit-btn">Edit</button></td>
+                    <td >1000</td>
+                    <td><button class="deposit-btn">Deposit</button></td>
+                    <td>
+                        <button class="withdraw-btn">Withdraw</button>
+                        <button class="products-btn">Products</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="shop_name">Shop Name</td>
+                    <td><button class="edit-btn">Edit</button></td>
+                    <td >1000</td>
+                    <td><button class="deposit-btn">Deposit</button></td>
+                    <td>
+                        <button class="withdraw-btn">Withdraw</button>
+                        <button class="products-btn">Products</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="shop_name">Shop Name</td>
+                    <td><button class="edit-btn">Edit</button></td>
+                    <td >1000</td>
+                    <td><button class="deposit-btn">Deposit</button></td>
+                    <td>
+                        <button class="withdraw-btn">Withdraw</button>
+                        <button class="products-btn">Products</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="shop_name">Shop Name</td>
+                    <td><button class="edit-btn">Edit</button></td>
+                    <td >1000</td>
+                    <td><button class="deposit-btn">Deposit</button></td>
+                    <td>
+                        <button class="withdraw-btn">Withdraw</button>
+                        <button class="products-btn">Products</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="shop_name">Shop Name</td>
+                    <td><button class="edit-btn">Edit</button></td>
+                    <td >1000</td>
+                    <td><button class="deposit-btn">Deposit</button></td>
+                    <td>
+                        <button class="withdraw-btn">Withdraw</button>
+                        <button class="products-btn">Products</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="shop_name">Shop Name</td>
+                    <td><button class="edit-btn">Edit</button></td>
+                    <td >1000</td>
+                    <td><button class="deposit-btn">Deposit</button></td>
+                    <td>
+                        <button class="withdraw-btn">Withdraw</button>
+                        <button class="products-btn">Products</button>
+                    </td>
+                </tr>                <tr>
+                    <td class="shop_name">Shop Name</td>
+                    <td><button class="edit-btn">Edit</button></td>
+                    <td >1000</td>
+                    <td><button class="deposit-btn">Deposit</button></td>
+                    <td>
+                        <button class="withdraw-btn">Withdraw</button>
+                        <button class="products-btn">Products</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="shop_name">Shop Name</td>
+                    <td><button class="edit-btn">Edit</button></td>
+                    <td >1000</td>
+                    <td><button class="deposit-btn">Deposit</button></td>
+                    <td>
+                        <button class="withdraw-btn">Withdraw</button>
+                        <button class="products-btn">Products</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="shop_name">Shop Name</td>
+                    <td><button class="edit-btn">Edit</button></td>
+                    <td >1000</td>
+                    <td><button class="deposit-btn">Deposit</button></td>
+                    <td>
+                        <button class="withdraw-btn">Withdraw</button>
+                        <button class="products-btn">Products</button>
+                    </td>
+                </tr>
+                
                 <!-- Add more rows as needed -->
             </tbody>
         </table>
-    </div>
+    </section>
 
     <script>
         const burgerMenu = document.querySelector('.burger-menu');
@@ -64,31 +177,71 @@
         const openItem = document.querySelector('.open');
         const bag = document.querySelector('.shopping_bag');
         const shifted = document.querySelector('.shifted');
+        const menuItem = document.querySelector('.new_shop');
+        const settingsItem = document.querySelector('.settings');
+
+        const newShopItem = `<span class="create_new_shop">Create new shop</span>`;
+        const settingsSpan = `<span class="open_settings">Settings</span>`;
 
         burgerMenu.addEventListener('mouseenter', () => {
-            burgerMenu.classList.add('burger-menu--open');
-            openItem.style.opacity = "1";
+            burgerMenu.style.width = "280px";
             openItem.style.visibility = 'visible';
-            bag.style.transform = "rotate(0deg)"
+            openItem.style.opacity = "1";
+            bag.classList.add('shopping_bag--open')
             shifted.style.transform = "translateX(280px)";
+
+            const newShop = document.querySelector('.create_new_shop');
+            if (!newShop) {
+                setTimeout(() => {
+                    menuItem.insertAdjacentHTML('beforeend', newShopItem);
+                    const createdShop = document.querySelector('.create_new_shop');
+                    createdShop.style.opacity = "1";
+                }, 300);
+            }
+
+            if (!settingsItem.querySelector('.open_settings')) {
+                setTimeout(() => {
+                    settingsItem.insertAdjacentHTML('beforeend', settingsSpan);
+                }, 300);
+            }
         });
 
         burgerMenu.addEventListener('mouseleave', () => {
-            burgerMenu.classList.remove('burger-menu--open');
-            openItem.style.opacity = "0";
+            burgerMenu.style.width = "104px";
             openItem.style.visibility = 'hidden';
-            bag.style.transform = "rotate(90deg)"
+            openItem.style.opacity = "0";
+            bag.classList.remove('shopping_bag--open')
             shifted.style.transform = "translateX(104px)"
+
+            const newShop = document.querySelector('.create_new_shop');
+            if (newShop) {
+                newShop.style.opacity = "0";
+                setTimeout(() => {
+                    newShop.remove();
+                }, 300);
+            }
+
+            const settingsSpan = document.querySelector('.settings .open_settings');
+            if (settingsSpan) {
+                settingsSpan.style.opacity = "0";
+                setTimeout(() => {
+                    settingsSpan.remove();
+                }, 300);
+            }
         });
 
 
-        menuList.addEventListener('mouseenter', () => {
-            burgerMenu.classList.add('burger-menu--open');
+        const settingsButton = document.querySelector('#settings');
+        settingsButton.addEventListener('click', () => {
+            // Обработка щелчка на элементе "Settings"
         });
 
-        menuList.addEventListener('mouseleave', () => {
-            burgerMenu.classList.remove('burger-menu--open');
+        const newShopButton = document.querySelector('#new-shop');
+        newShopButton.addEventListener('click', () => {
+            // Обработка щелчка на элементе "Create new shop"
         });
+
+
 
         function createTableRow(shop) {
             const row = document.createElement('tr');

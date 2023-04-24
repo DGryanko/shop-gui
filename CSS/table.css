@@ -1,6 +1,7 @@
 /* CSS table */
 .table_container {
-    /* width: 100%; */
+    transform: translateX(320px);
+    margin-right: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,28 +10,39 @@
 
 table {
     border-collapse: collapse;
-    width: 90%;
+    width: 80vw;
     border: none;
 
+}
+
+tr {
+    height: 60px;
 }
 
 td {
     padding: 8px;
     text-align: left;
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 2px solid #ddd;
 }
 
 th {
     background-color: #f2f2f2;
 }
 
+.shop_name {
+    width: 140px;
+}
+
 .edit-btn,
 .deposit-btn,
 .withdraw-btn,
 .products-btn {
-    padding: 6px 12px;
+    padding: 6px 0px;
     border: none;
     cursor: pointer;
     text-decoration: none;
+    text-align: center;
     display: inline-block;
     font-size: 14px;
     margin: 4px 2px;
@@ -38,19 +50,36 @@ th {
 }
 
 .edit-btn {
-    background-color: #1875F0;
-    color: white;
+    background-image: url('../src/pen.svg');
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-position: 20% 50%;
+    padding: 6px 12px 6px 26px;
+    width: 94px;
+    height: 33px;
+    
+    background-color: #DEE0E2;
+    color: #525B6A;
 }
 
 .deposit-btn,
 .withdraw-btn {
+    width: 85px;
     background-color: #1875F0;
     color: white;
     margin-left: 20px;
 }
 
+.withdraw-btn {
+    margin-right: 206px;
+}
+
 .products-btn {
+    width: 85px;
     background-color: #FF0000;
     color: white;
     margin-left: 200px;
 }
+tr:last-child td {
+    border-bottom: none;
+    }

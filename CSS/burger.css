@@ -1,3 +1,16 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.header,
+.section {
+    position: relative;
+    width: calc(50% - 20px);
+}
+
 .burger-menu {
     width: 104px;
     height: 100%;
@@ -11,24 +24,36 @@
     z-index: 9999;
 }
 
-.burger-menu--open {
-    width: 280px;
-}
-
 .shifted {
     transform: translateX(104px);
     transition: all 0.3s ease-in-out;
 }
 
 .open {
-    visibility: hidden;
     opacity: 0;
-    transition:0.3s ease-in-out;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
 }
+
+.opened {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s ease-in-out;
+}
+
+.burger-menu {
+    transition: width 0.3s ease;
+}
+
+.burger-menu__list .create_new_shop {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
 
 .burger-menu__item {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: center;
     color: #ffffff;
     padding: 20px;
@@ -38,11 +63,10 @@
 }
 
 .burger-menu__list {
-    display: none;
     list-style: none;
     margin: 0;
     padding: 0;
-    padding-top: 30px;
+    padding-top: 1em;
 }
 
 
@@ -56,17 +80,20 @@
 }
 
 .burger-menu__list li a {
-    width: 100%;
     color: #ffffff;
     text-decoration: none;
     padding: 10px;
     font-family: HeliosC;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .burger-menu__list li a:hover {
+    fill: red;
     background-color: #ffffff;
     color: #ff0000;
+    transition: background-color 0.3s ease-in-out;
 }
+
 
 .burger-menu__item.settings {
     position: absolute;
@@ -75,17 +102,30 @@
     display: flex;
     align-items: center;
     font-family: HeliosC;
+    transition: background-color 0.3s ease-in-out;
 }
 
+
+
 .burger-menu__item.settings i {
-    font-size: 24px;
-    margin-right: 10px;
+    font-size: 30px;
+    margin-right: 0.5em;
+}
+
+.burger-menu__list li div {
+    position: relative;
+}
+
+
+.burger-menu__item.settings i:hover {
+    transform: rotate(180deg);
+    transition: all 0.2s ease-in-out;
 }
 
 .shop {
+    padding-left: 13px;
     font-size: 35px;
     font-weight: bold;
-    padding-top: 20px;
 }
 
 .shop i {
@@ -94,13 +134,43 @@
 }
 
 .new_shop {
-    text-align: center;
+    position: absolute;
+    display: flex;
+
+    font-size: 23px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.new_shop div {
+    position: absolute;
+    display: flex;
+    margin-left: 1.2em;
+    margin-right: 0.5em;
+}
+
+.new_shop span {
+    margin-right: 0.7em;
+}
+
+.new_shop:hover path {
+    fill: #ff0000;
 }
 
 .shopping_bag {
+    margin-left: 3.7em;
     width: 35px;
-    padding-right: 13px;
+    height: 35px;
     transform: rotate(90deg);
     transition: 0.3s ease-in-out;
 }
 
+.shopping_bag--open {
+    margin-left: 0;
+    transform: rotate(0deg);
+}
+
+.log_out:hover path{
+    cursor: pointer;
+    fill: #ff0000;
+}

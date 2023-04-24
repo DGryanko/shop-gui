@@ -1,0 +1,62 @@
+/* CSS table */
+.table_container {
+    transform: translateX(320px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    }
+    
+    table {
+    border-collapse: collapse;
+    width: calc(100% - 40px);
+    border: none;
+    }
+    
+    td {
+    padding: 8px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 2px solid #ddd;
+    }
+    
+    th {
+    background-color: #f2f2f2;
+    }
+    
+    .shop-name {
+    width: 140px;
+    }
+    
+    .edit-btn {
+    width: 40px;
+    background-color: #1875F0;
+    color: white;
+    }
+    
+    .shop-wallet {
+    width: 600px;
+    }
+    
+    .deposit-btn,
+    .withdraw-btn {
+    width: 85px;
+    background-color: #1875F0;
+    color: white;
+    margin-left: 38px;
+    }
+    
+    .withdraw-btn {
+    margin-right: 206px;
+    }
+    
+    .products-btn {
+    width: 85px;
+    background-color: #FF0000;
+    color: white;
+    margin-left: 206px;
+    }
+    
+    tr:last-child td {
+    border-bottom: none;
+    }
