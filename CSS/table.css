@@ -14,6 +14,18 @@ table {
     border: none;
 
 }
+thead th {
+    padding-bottom: 14px;
+}
+
+thead tr {
+    height: 30px;
+    border-bottom: 2px solid #363636;
+}
+
+tr:first-child {
+    height: 14px;
+}
 
 tr {
     height: 60px;
@@ -23,11 +35,7 @@ td {
     padding: 8px;
     text-align: left;
     background-color: rgba(255, 255, 255, 1);
-    border-bottom: 2px solid #ddd;
-}
-
-th {
-    background-color: #f2f2f2;
+    border-bottom: 2px solid #F5F5F5;
 }
 
 .shop_name {
@@ -49,6 +57,14 @@ th {
     border-radius: 4px;
 }
 
+.edit-btn:hover,
+.deposit-btn:hover,
+.withdraw-btn:hover,
+.products-btn:hover {
+    color: #000;
+}
+
+
 .edit-btn {
     background-image: url('../src/pen.svg');
     background-repeat: no-repeat;
@@ -57,7 +73,7 @@ th {
     padding: 6px 12px 6px 26px;
     width: 94px;
     height: 33px;
-    
+
     background-color: #DEE0E2;
     color: #525B6A;
 }
@@ -80,6 +96,21 @@ th {
     color: white;
     margin-left: 200px;
 }
+
 tr:last-child td {
     border-bottom: none;
-    }
+}
+
+.column_name {
+    font-family: 'HeliosC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #525B6A;
+}

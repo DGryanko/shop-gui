@@ -36,40 +36,60 @@
             <!-- <span class="open">Settings</span> -->
         </a>
     </div>
-    <header class="header_merchant shifted">
+    <nav class="header_merchant shifted">
+
         <div>
-            <a href="#" class="gray_txt">Wallet</a>
+            <a href="#" class="gray_txt_18">Wallet</a>
         </div>
         <div>
-            <a>{username}</a>
+            <div>
+                <a class="gray_txt_18">{username}</a>
+            </div>
+            <div class="log_out">
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                        <path stroke="#D8D8D8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 19H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h4M14 15l5-5-5-5M19 10H7" />
+                    </svg>
+                </a>
+            </div>
         </div>
-        <div class="log_out">
-            <a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
-                    <path stroke="#D8D8D8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M7 19H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h4M14 15l5-5-5-5M19 10H7" />
-                </svg>
-            </a>
-        </div>
-    </header>
+    </nav>
     <!-- Main content -->
+    <section>
+        <header class="header_box">
+            <div>
+                <h1 class="gray_txt_36">Shops</h1>
+            </div>
+            <div class="search-container">
+                <form>
+                    <div class="search-wrapper">
+                        <input type="search" class="callback_form_input search" placeholder="Search..." id="search">
+                        <button class="search-icon" type="submit"><span class="sr-only">Search</span></button>
+                    </div>
+                </form>
+            </div>
+
+        </header>
+    </section>
     <section class="table_container">
         <table>
             <thead>
                 <tr>
-                    <th>Name</th>
+                    <th class="column_name">Name</th>
                     <th></th>
-                    <th>Wallet</th>
+                    <th class="column_name">Wallet</th>
                     <th></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Add rows dynamically from server response -->
+                <tr></tr>
                 <tr>
                     <td class="shop_name">Shop Name</td>
-                    <td><button class="edit-btn">Edit</button></td>
-                    <td >1000</td>
+                    <td><button class="edit-btn" id="edit-btn1">Edit</button></td>
+                    <td>1000</td>
                     <td><button class="deposit-btn">Deposit</button></td>
                     <td>
                         <button class="withdraw-btn">Withdraw</button>
@@ -78,8 +98,8 @@
                 </tr>
                 <tr>
                     <td class="shop_name">Shop Name</td>
-                    <td><button class="edit-btn">Edit</button></td>
-                    <td >1000</td>
+                    <td><button class="edit-btn" id="edit-btn2">Edit</button></td>
+                    <td>1000</td>
                     <td><button class="deposit-btn">Deposit</button></td>
                     <td>
                         <button class="withdraw-btn">Withdraw</button>
@@ -88,8 +108,8 @@
                 </tr>
                 <tr>
                     <td class="shop_name">Shop Name</td>
-                    <td><button class="edit-btn">Edit</button></td>
-                    <td >1000</td>
+                    <td><button class="edit-btn" id="edit-btn3">Edit</button></td>
+                    <td>1000</td>
                     <td><button class="deposit-btn">Deposit</button></td>
                     <td>
                         <button class="withdraw-btn">Withdraw</button>
@@ -98,8 +118,8 @@
                 </tr>
                 <tr>
                     <td class="shop_name">Shop Name</td>
-                    <td><button class="edit-btn">Edit</button></td>
-                    <td >1000</td>
+                    <td><button class="edit-btn" id="edit-btn4">Edit</button></td>
+                    <td>1000</td>
                     <td><button class="deposit-btn">Deposit</button></td>
                     <td>
                         <button class="withdraw-btn">Withdraw</button>
@@ -108,8 +128,8 @@
                 </tr>
                 <tr>
                     <td class="shop_name">Shop Name</td>
-                    <td><button class="edit-btn">Edit</button></td>
-                    <td >1000</td>
+                    <td><button class="edit-btn" id="edit-btn5">Edit</button></td>
+                    <td>1000</td>
                     <td><button class="deposit-btn">Deposit</button></td>
                     <td>
                         <button class="withdraw-btn">Withdraw</button>
@@ -118,8 +138,8 @@
                 </tr>
                 <tr>
                     <td class="shop_name">Shop Name</td>
-                    <td><button class="edit-btn">Edit</button></td>
-                    <td >1000</td>
+                    <td><button class="edit-btn" id="edit-btn6">Edit</button></td>
+                    <td>1000</td>
                     <td><button class="deposit-btn">Deposit</button></td>
                     <td>
                         <button class="withdraw-btn">Withdraw</button>
@@ -128,17 +148,8 @@
                 </tr>
                 <tr>
                     <td class="shop_name">Shop Name</td>
-                    <td><button class="edit-btn">Edit</button></td>
-                    <td >1000</td>
-                    <td><button class="deposit-btn">Deposit</button></td>
-                    <td>
-                        <button class="withdraw-btn">Withdraw</button>
-                        <button class="products-btn">Products</button>
-                    </td>
-                </tr>                <tr>
-                    <td class="shop_name">Shop Name</td>
-                    <td><button class="edit-btn">Edit</button></td>
-                    <td >1000</td>
+                    <td><button class="edit-btn" id="edit-btn7">Edit</button></td>
+                    <td>1000</td>
                     <td><button class="deposit-btn">Deposit</button></td>
                     <td>
                         <button class="withdraw-btn">Withdraw</button>
@@ -147,8 +158,8 @@
                 </tr>
                 <tr>
                     <td class="shop_name">Shop Name</td>
-                    <td><button class="edit-btn">Edit</button></td>
-                    <td >1000</td>
+                    <td><button class="edit-btn" id="edit-btn8">Edit</button></td>
+                    <td>1000</td>
                     <td><button class="deposit-btn">Deposit</button></td>
                     <td>
                         <button class="withdraw-btn">Withdraw</button>
@@ -157,20 +168,43 @@
                 </tr>
                 <tr>
                     <td class="shop_name">Shop Name</td>
-                    <td><button class="edit-btn">Edit</button></td>
-                    <td >1000</td>
+                    <td><button class="edit-btn" id="edit-btn9">Edit</button></td>
+                    <td>1000</td>
                     <td><button class="deposit-btn">Deposit</button></td>
                     <td>
                         <button class="withdraw-btn">Withdraw</button>
                         <button class="products-btn">Products</button>
                     </td>
                 </tr>
-                
+                <tr>
+                    <td class="shop_name">Shop Name</td>
+                    <td><button class="edit-btn" id="edit-btn10">Edit</button></td>
+                    <td>1000</td>
+                    <td><button class="deposit-btn">Deposit</button></td>
+                    <td>
+                        <button class="withdraw-btn">Withdraw</button>
+                        <button class="products-btn">Products</button>
+                    </td>
+                </tr>
+
                 <!-- Add more rows as needed -->
             </tbody>
         </table>
     </section>
-
+    <!-- Modals -->
+    <div id="modal" class="modal">
+        <div class="modal_edit">
+            <div class="close-container">
+                <span class="close">&times;</span>
+            </div>
+            <form>
+                <h3 class="gray_txt_36">{Shop's name} rename</h3>
+                <input type="text" class="callback_form_input" placeholder="Enter name" id="edit">
+                <a href="#" class="save btn_merchant">Save</a>
+            </form>
+        </div>
+    </div>
+    <!-- Burger -->
     <script>
         const burgerMenu = document.querySelector('.burger-menu');
         const menuList = document.querySelector('.burger-menu__list');
@@ -307,7 +341,66 @@
         loadShops();
 
     </script>
+    <!-- Modal -->
+    <script>
+        // Получаем нужные элементы
+        const modal = document.getElementById("modal");
+        const editBtn = document.getElementById("edit-btn1");
+        const closeBtn = document.getElementsByClassName("close")[0];
 
+        // При клике на кнопку открываем модальное окно
+        editBtn.onclick = function () {
+            modal.classList.add("show");
+        }
+
+        // При клике на крестик закрываем модальное окно
+        closeBtn.onclick = function () {
+            modal.classList.remove("show");
+        }
+
+        // При клике вне модального окна (на подложку) закрываем модальное окно
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.classList.remove("show");
+            }
+        }
+
+    </script>
+    <!-- Search -->
+    <script>
+        const form = document.querySelector('form');
+        const input = document.querySelector('#search');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Отмена стандартного поведения формы
+
+            const searchTerm = input.value.trim(); // Получение значения поля ввода и удаление пробелов с начала и конца
+            // Отправка данных на сервер с помощью AJAX, fetch или других методов
+            console.log(searchTerm);
+            sessionStorage.setItem('searchTerm', searchTerm);
+        });
+
+        const searchTerm = sessionStorage.getItem('searchTerm');
+
+        // Если значение найдено, установить его в поле поиска
+        // if (searchTerm) {
+        //     input.value = searchTerm;
+        // }
+
+        const searchIcon = document.querySelector('.search-icon');
+
+        searchIcon.addEventListener('click', () => {
+            form.submit(); // Сабмит формы по клику на иконку
+        });
+
+        input.addEventListener('click', (event) => {
+            event.preventDefault(); // Отмена сабмита формы по клику на input
+        });
+
+
+
+
+    </script>
 </body>
 
 </html>

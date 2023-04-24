@@ -5,11 +5,89 @@
     /* align-items: center; */
 }
 
-.header,
-.section {
+nav,
+section {
     position: relative;
     width: calc(50% - 20px);
 }
+nav div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.header_box {
+    width: 80vw;
+    margin-left: 320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    width: 340px;
+    height: 50px;
+    padding: 10px;
+    padding-right: 30px;
+    background: #FFFFFF;
+    border: 2px solid #EFEFEF;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search::-ms-clear {
+    display: none;
+}
+
+.search::-webkit-search-cancel-button {
+    display: none;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.search-wrapper::before {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' fill='none'%3e%3cpath fill='%23D1D1D1' d='m16.77 14.7-3.31-3.31a.8.8 0 0 0-.57-.23h-.54a6.9 6.9 0 1 0-1.2 1.2v.53c0 .21.09.42.24.57l3.31 3.3a.8.8 0 0 0 1.13 0l.94-.93a.8.8 0 0 0 0-1.13ZM6.9 11.16a4.25 4.25 0 1 1 0-8.5 4.25 4.25 0 0 1 0 8.5Z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.search-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 
 .burger-menu {
     width: 104px;
@@ -21,7 +99,7 @@
     left: 0;
     background-color: #ff0000;
     transition: all 0.3s ease-in-out;
-    z-index: 9999;
+    z-index: 9990;
 }
 
 .shifted {
@@ -49,7 +127,6 @@
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-
 
 .burger-menu__item {
     display: flex;
@@ -94,7 +171,6 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-
 .burger-menu__item.settings {
     position: absolute;
     bottom: 20px;
@@ -104,8 +180,6 @@
     font-family: HeliosC;
     transition: background-color 0.3s ease-in-out;
 }
-
-
 
 .burger-menu__item.settings i {
     font-size: 30px;
@@ -169,8 +243,14 @@
     margin-left: 0;
     transform: rotate(0deg);
 }
+.log_out {
+    height: 30px;
+    margin-left: 18px;
+}
 
-.log_out:hover path{
+.log_out:focus,
+.log_out:hover {
     cursor: pointer;
-    fill: #ff0000;
+    transform: scale(2);
+    transition: transform 0.3s ease-in-out;
 }
